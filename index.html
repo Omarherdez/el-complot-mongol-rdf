@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>El complot mongol - RDF</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    pre {
+      background: #f4f4f4;
+      padding: 20px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    a.button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Datos RDF - <em>El complot mongol</em></h1>
+
+  <p>Este sitio presenta los metadatos RDF de la novela gráfica <strong>El complot mongol</strong>, en formato RDF/XML conforme a los vocabularios del <a href="http://rdaregistry.info" target="_blank">RDA Registry</a>.</p>
+
+  <a class="button" href="https://raw.githubusercontent.com/Omarherdez/el-complot-mongol-rdf/main/el_complot_mongol.rdf" target="_blank">Ver RDF completo</a>
+
+  <h2>¿Qué contiene?</h2>
+  <ul>
+    <li>Agentes (autores, adaptadores)</li>
+    <li>Obras y adaptaciones</li>
+    <li>Expresiones y manifestaciones</li>
+    <li>Identificadores, editoriales, extensión, etc.</li>
+  </ul>
+
+  <h2>Ejemplo de código RDF/XML</h2>
+  <pre>
+&lt;rdf:Description rdf:about="http://example.org/A1"&gt;
+  &lt;rdf:type rdf:resource="http://rdaregistry.info/Elements/a/Person"/&gt;
+  &lt;rdaa:P50117&gt;Bernal, Rafael&lt;/rdaa:P50117&gt;
+  &lt;rdaa:P50121&gt;1915&lt;/rdaa:P50121&gt;
+  &lt;rdaa:P50120&gt;1972&lt;/rdaa:P50120&gt;
+  &lt;rdaa:P50411&gt;Bernal, Rafael, 1915-1972&lt;/rdaa:P50411&gt;
+&lt;/rdf:Description&gt;
+  </pre>
+
+  <p>Puedes reutilizar, adaptar y visualizar estos datos con herramientas de la Web Semántica como SPARQL, RDF4J o Protégé.</p>
+
+</body>
+</html>
