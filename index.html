@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>El complot mongol - Datos vinculados con autoridades</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; background: #f8f8f8; }
+    .card {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h2 { margin-top: 0; }
+    a { color: #0066cc; text-decoration: none; }
+    ul { padding-left: 20px; }
+  </style>
+</head>
+<body>
+
+  <h1>Datos vinculados - <em>El complot mongol</em> con autoridades externas</h1>
+
+  <div class="card" id="A1">
+    <h2>Entidad: <a href="http://example.org/A1">Rafael Bernal</a></h2>
+    <p><strong>Tipo:</strong> Persona</p>
+    <ul>
+      <li><strong>Nombre preferido (P50117):</strong> Bernal, Rafael</li>
+      <li><strong>Fecha de nacimiento (P50121):</strong> 1915</li>
+      <li><strong>Fecha de fallecimiento (P50120):</strong> 1972</li>
+      <li><strong>Forma autorizada (P50411):</strong> Bernal, Rafael, 1915–1972</li>
+      <li><strong>Wikidata:</strong> <a href="https://www.wikidata.org/wiki/Q6097057" target="_blank">Q6097057</a></li>
+      <li><strong>VIAF:</strong> <a href="https://viaf.org/viaf/61707014/" target="_blank">61707014</a></li>
+      <li><strong>ISNI:</strong> <a href="https://isni.org/isni/0000000076897978" target="_blank">0000 0000 7689 7978</a></li>
+      <li><strong>LC Linked Data:</strong> <a href="http://id.loc.gov/authorities/names/n89603400" target="_blank">n89603400</a></li>
+    </ul>
+  </div>
+
+  <div class="card" id="A3">
+    <h2>Entidad: <a href="http://example.org/A3">Luis Humberto Crosthwaite</a></h2>
+    <p><strong>Tipo:</strong> Persona</p>
+    <ul>
+      <li><strong>Nombre preferido (P50117):</strong> Crosthwaite, Luis Humberto</li>
+      <li><strong>Fecha de nacimiento (P50121):</strong> 1962</li>
+      <li><strong>Forma autorizada (P50411):</strong> Crosthwaite, Luis Humberto, 1962–</li>
+      <li><strong>Wikidata:</strong> <a href="https://www.wikidata.org/wiki/Q4890753" target="_blank">Q4890753</a></li>
+      <li><strong>VIAF:</strong> <a href="https://viaf.org/viaf/56864901/" target="_blank">56864901</a></li>
+      <li><strong>ISNI:</strong> <a href="https://isni.org/isni/000000005177789X" target="_blank">0000 0000 5177 789X</a></li>
+      <li><strong>LC Linked Data:</strong> <a href="http://id.loc.gov/authorities/names/nr90021828" target="_blank">nr90021828</a></li>
+    </ul>
+  </div>
+
+  <div class="card" id="W1">
+    <h2>Entidad: <a href="http://example.org/W1">Obra original</a></h2>
+    <p><strong>Tipo:</strong> Obra (Work)</p>
+    <ul>
+      <li><strong>Título (P10223):</strong> El complot mongol</li>
+      <li><strong>Año (P10219):</strong> 1969</li>
+      <li><strong>Género (P10004):</strong> Novela</li>
+      <li><strong>Autor (P10436):</strong> <a href="#A1">Rafael Bernal</a></li>
+      <li><strong>Forma autorizada (P10331):</strong> Bernal, Rafael, 1915–1972. Complot mongol</li>
+      <li><strong>Wikidata:</strong> <a href="https://www.wikidata.org/wiki/Q1650857" target="_blank">Q1650857</a></li>
+      <li><strong>LC Linked Data:</strong> <a href="http://id.loc.gov/authorities/names/nr2001025912" target="_blank">nr2001025912</a></li>
+    </ul>
+  </div>
+
+  <div class="card" id="W2">
+    <h2>Entidad: <a href="http://example.org/W2">Adaptación gráfica</a></h2>
+    <p><strong>Tipo:</strong> Obra derivada (Work)</p>
+    <ul>
+      <li><strong>Título (P10223):</strong> Complot mongol</li>
+      <li><strong>Año (P10219):</strong> 2017</li>
+      <li><strong>Género (P10004):</strong> Novela gráfica</li>
+      <li><strong>Guionista (P10429):</strong> <a href="#A3">Luis Humberto Crosthwaite</a></li>
+      <li><strong>Basada en (P10252):</strong> <a href="#W1">Obra original</a></li>
+    </ul>
+  </div>
+
+  <div class="card" id="M1">
+    <h2>Entidad: <a href="http://example.org/M1">Manifestación</a></h2>
+    <p><strong>Tipo:</strong> Manifestación</p>
+    <ul>
+      <li><strong>Título (P30156):</strong> El complot mongol</li>
+      <li><strong>Descripción física:</strong> 120 páginas, ilustraciones</li>
+      <li><strong>Lugar (P30088):</strong> México, D.F.</li>
+      <li><strong>Editorial (P30176):</strong> Joaquín Mortiz / Fondo de Cultura Económica</li>
+      <li><strong>Año (P30011):</strong> 2017</li>
+      <li><strong>ISBN (P30004):</strong> 978-607-16-4567-8</li>
+    </ul>
+  </div>
+
+</body>
+</html>
