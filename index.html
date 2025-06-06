@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El complot mongol - RDF</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <main class="max-w-4xl mx-auto p-6">
+
+    <h1 class="text-3xl font-bold mb-6">💥 El complot mongol - Datos RDF</h1>
+    <p class="mb-6">Visualización e interacción con los datos vinculados sobre la obra <em>El complot mongol</em>, sus autores, y su adaptación a novela gráfica.</p>
+    <div class="mb-6">
+      <label for="busqueda" class="block text-sm font-medium text-gray-700 mb-1">🔍 Buscar en las entidades:</label>
+      <input type="text" id="busqueda" onkeyup="filtrarTarjetas()" placeholder="Escribe un término..." class="w-full p-2 border rounded">
+    </div>
+
+    <!-- Sección exportación RDF -->
+    <section class="mt-10 p-4 border rounded-lg shadow bg-white">
+      <h2 class="text-xl font-bold mb-2">📦 Exportar datos RDF</h2>
+      <p class="mb-4">✅ <strong>Listo. He añadido la expresión <code>E1</code></strong> a los datos RDF y actualizado los archivos exportados:</p>
+
+      <ul class="list-disc pl-6 mb-4">
+        <li><strong>Idioma:</strong> Español</li>
+        <li><strong>Contenido:</strong> texto + imagen (usando vocabulario RDA)</li>
+        <li><strong>Relación con la obra derivada:</strong> <code>W2</code></li>
+        <li><strong>Relación con la manifestación:</strong> <code>M1 → E1</code></li>
+      </ul>
+
+      <p class="mb-2"><strong>Descarga los RDF con expresión incluida:</strong></p>
+      <ul class="list-disc pl-6">
+        <li>🟦 <a class="text-blue-600 underline" href="el_complot_mongol.rdf" download>RDF/XML (.rdf)</a></li>
+        <li>🟢 <a class="text-green-600 underline" href="el_complot_mongol.ttl" download>Turtle (.ttl)</a></li>
+        <li>🟠 <a class="text-orange-600 underline" href="el_complot_mongol.jsonld" download>JSON-LD (.jsonld)</a></li>
+      </ul>
+    </section>
+
+    <!-- Expresión -->
+    <section class="mt-10 p-4 border rounded-lg shadow bg-white" id="E1">
+      <h2 class="text-xl font-bold mb-2">✍️ Expresión (E1)</h2>
+      <ul class="list-disc pl-6">
+        <li><strong>Idioma:</strong> Español</li>
+        <li><strong>Tipo de contenido:</strong> texto <a href="http://rdaregistry.info/termList/RDAContentType/1020" class="text-blue-600">(RDA)</a>, imagen <a href="http://rdaregistry.info/termList/RDAContentType/1014" class="text-blue-600">(RDA)</a></li>
+        <li><strong>Obra relacionada:</strong> <a href="#W2" class="text-blue-600">W2</a></li>
+      </ul>
+    </section>
+
+    <!-- Manifestación -->
+    <section class="mt-10 p-4 border rounded-lg shadow bg-white" id="M1">
+      <h2 class="text-xl font-bold mb-2">📘 Manifestación (M1)</h2>
+      <ul class="list-disc pl-6">
+        <li><strong>Título:</strong> El complot mongol</li>
+        <li><strong>Tipo de recurso:</strong> novela gráfica</li>
+        <li><strong>Mención de responsabilidad:</strong> Rafael Bernal ; dibujo Ricardo Pelaéz ; guión Luis Humberto Crosthwaite</li>
+        <li><strong>Lugar de publicación:</strong> México, D.F.</li>
+        <li><strong>Editorial:</strong>
+          <ul class="ml-6 list-disc">
+            <li>Joaquín Mortiz <a href="https://viaf.org/viaf/307417138/" class="text-blue-600">(VIAF)</a></li>
+            <li>Fondo de Cultura Económica <a href="http://id.loc.gov/authorities/names/n80010656" class="text-blue-600">(LC)</a> <a href="https://viaf.org/viaf/121111168/" class="text-blue-600">(VIAF)</a></li>
+          </ul>
+        </li>
+        <li><strong>Año:</strong> 2017</li>
+        <li><strong>Descripción física:</strong> 120 páginas, ilustraciones</li>
+        <li><strong>Serie:</strong> Tezontle</li>
+        <li><strong>ISBN:</strong> <a href="https://isbnsearch.org/isbn/9786071645678" class="text-blue-600">978-607-16-4567-8</a></li>
+        <li><strong>Tipo de soporte:</strong> volumen <a href="http://rdaregistry.info/termList/RDACarrierType/1049" class="text-blue-600">(RDA)</a></li>
+        <li><strong>Tipo de medio:</strong> sin mediación <a href="http://rdaregistry.info/termList/RDAMediaType/1007" class="text-blue-600">(RDA)</a></li>
+        <li><strong>Modo de emisión:</strong> monografía <a href="http://rdaregistry.info/termList/ModeIssue/1001" class="text-blue-600">(RDA)</a></li>
+        <li><strong>Expresión relacionada:</strong> <a href="#E1" class="text-blue-600">E1</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+<script>
+  function filtrarTarjetas() {
+    const query = document.getElementById('busqueda').value.toLowerCase();
+    const tarjetas = document.querySelectorAll('section[id^="E"], section[id^="M"]');
+
+    tarjetas.forEach(tarjeta => {
+      const texto = tarjeta.innerText.toLowerCase();
+      if (texto.includes(query)) {
+        tarjeta.style.display = "block";
+      } else {
+        tarjeta.style.display = "none";
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
